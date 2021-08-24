@@ -18,7 +18,7 @@ router.get('/test', function(req, res) {
 
 
 // Route to see all associated pools given an asset ID
-router.post('/pool/:assetId', function(req, res, next) {
+router.post('/assets/:assetId/pools', function(req, res, next) {
   if (!req.params.assetId) {
     const err = new Error('assetId is required');
     err.status = 400;
@@ -51,7 +51,7 @@ router.post('/pool/:assetId', function(req, res, next) {
 
 
 // Given an asset ID find trading volume between given time range
-router.post('/volume/:assetId', function(req, res, next) {
+router.post('/assets/:assetId/volume', function(req, res, next) {
   if (!req.query.startDate || !req.query.endDate) {
     const err = new Error('Required query params missing');
     err.status = 400;

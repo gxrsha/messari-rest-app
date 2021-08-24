@@ -31,13 +31,13 @@ $ npm start
   Description: 
   Retrieve all pools that exist that include given `assetId`
 ```
-/pool/:assetId
+/assets/:assetId/pools
 ```
 
   Description: 
-  Retrieve total volume of given asset swapped in a given time range [`startDate`, `endDate`]
+  Retrieve total volume of given asset swapped in a given time range (using unix time) [`startDate`, `endDate`]
 ```
-/volume/:assetId?startDate&endDate
+/assets/:assetId/volume?startDate&endDate
 ```
 
   Description: 
